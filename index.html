@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <title>Piano Simulator</title>
+</head>
+<body>
+    <noscript class="no-js">
+        <p>Para utilizar o simulador de piano, é necessário habilitar o JavaScript.</p>
+    </noscript>
+    <div class="landscape-message">
+        Por favor, gire seu dispositivo para a orientação paisagem.
+    </div>
+    <main class="piano">
+        
+        <header class="piano__controls">
+            <h1 class="piano__logo">🎹 Piano Simulator</h1>
+            
+            <div class="piano__column piano__column--volume-slider">
+                <label for="volume" class="piano__label">Volume</label>
+                <input type="range" id="volume" min="0" max="5" value="0.5" step="any" />
+            </div>
+            
+            <div class="piano__column piano__column--keys-check">
+                <label for="showKeys" class="piano__label">Teclas</label>
+                <input type="checkbox" id="showKeys" checked />
+            </div>
+        </header>
+
+        <ul class="piano__keys">
+            <li class="piano__key piano__key--white" data-key="a"><span>Dó</span></li>
+            <li class="piano__key piano__key--black" data-key="w"><span>Dó#<br>Ré♭</span></li>
+            <li class="piano__key piano__key--white" data-key="s"><span>Ré</span></li>
+            <li class="piano__key piano__key--black" data-key="e"><span>Ré#<br>Mi♭</span></li>
+            <li class="piano__key piano__key--white" data-key="d"><span>Mi</span></li>
+            <li class="piano__key piano__key--white" data-key="r"><span>Fá</span></li>
+            <li class="piano__key piano__key--black" data-key="f"><span>Fá#<br>Sol♭</span></li>
+            <li class="piano__key piano__key--white" data-key="t"><span>Sol</span></li>
+            <li class="piano__key piano__key--black" data-key="g"><span>Sol#<br>Lá♭</span></li>
+            <li class="piano__key piano__key--white" data-key="y"><span>Lá</span></li>
+            <li class="piano__key piano__key--black" data-key="h"><span>Lá#<br>Si♭</span></li>
+            <li class="piano__key piano__key--white" data-key="u"><span>Si</span></li>
+            <li class="piano__key piano__key--white" data-key="j"><span>Dó</span></li>
+        </ul>
+        <ul class="piano__animals">
+            <li class="piano__animal" data-key="1">🐣</li>
+            <li class="piano__animal" data-key="2">🐷</li>
+            <li class="piano__animal" data-key="3">🐘</li>
+            <li class="piano__animal" data-key="4">🦆</li>
+            <li class="piano__animal" data-key="5">🐍</li>
+            <li class="piano__animal" data-key="6">🐴</li>
+            <li class="piano__animal" data-key="7">🐮</li>
+            <li class="piano__animal" data-key="8">🐸   </li>
+        </ul>
+
+  </main>
+  <footer class="social-media">
+      <p>© 2023 Juliana Chaves Palm</p>
+      <ul class="social-media__links" >
+      <li class="social-media__item">
+          <a href="https://www.linkedin.com/in/julianachavespalm" class="social-media__link"><i class="fa-brands fa-linkedin" title="Linkedin" aria-label="Linkedin"></i></a>
+      </li>
+      <li class="social-media__item"><a href="https://www.github.com/julianachavespalm" class="social-media__link">
+          <i class="fa-brands fa-github-alt" title="Github" aria-label="Github"></i></a></li>
+      </ul>
+  </p>
+  </footer>
+  <script src="./src/scripts/engine.js" defer></script>
+  <script src="https://kit.fontawesome.com/e0954b0c75.js" crossorigin="anonymous"></script>
+</body>
+</html>

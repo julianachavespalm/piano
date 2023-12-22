@@ -1,0 +1,301 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    color: #ffffff;
+}
+
+.hide {
+    visibility: hidden;
+  }
+
+.no-js {
+
+    margin: 1rem;
+    padding: 2rem;
+    background: #BABBBD;
+    color: #000000;
+
+    border: 2px inset #EDF1FF;
+    border-radius: 0.25rem;
+
+    font-family: 'Roboto', sans-serif;
+  
+}
+
+.landscape-message {
+    margin: 1rem;
+    padding: 2rem;
+    background: #BABBBD;
+    color: #000000;
+
+    border: 2px inset #EDF1FF;
+    border-radius: 0.25rem;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.banner__logo { 
+    width: 100%;
+    margin: 1rem;
+
+    color: #000000;
+    font-family: 'IMB Plex Sans', sans-serif;
+}
+
+.piano {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    
+
+    border: 1px solid;
+    border-radius: 1.25rem;
+
+    background-color: #000000;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+    .piano__logo {
+        margin-right: auto;
+
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .piano__controls {
+        display: flex;
+        align-items: center;
+
+        padding: 1rem 0;
+    }
+    
+        .piano__label {
+            margin: 0 0.5rem 0 0;
+
+            font-size: 1rem;
+        }
+
+        .piano__column {
+            display: flex;
+            align-items: center;
+        }
+
+            .piano__column--volume-slider {
+                margin-right: auto;
+                accent-color: #ffffff;
+                cursor: pointer;
+            }
+
+                .piano__column--keys-check input {
+                    position: relative;
+                    width: 60px; 
+                    height: 30px;
+                    appearance: none;
+
+                    border-radius: 30px;
+
+                    background-color: #4b4b4b;
+                    cursor: pointer;
+                }
+
+                .piano__column--keys-check input::before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 20px;
+                    height: 20px;
+
+                    border-radius: inherit;
+
+                    background-color: #acacac;
+
+                    transition: all  0.4s ease;
+                }
+
+                .piano__column--keys-check input:checked::before {
+                    left: calc(100% - 5px);
+
+                    background-color: #ffffff;
+
+                    transform: translateX(-100%);
+                }
+
+  
+    .piano__keys {
+        position: relative;
+        display: flex;
+        margin: 2rem auto;
+
+        list-style: none;
+
+        user-select: none;
+    }
+
+        .piano__key {
+            cursor: pointer;
+            text-align: center;
+        }
+
+            .piano__key--white {
+                border: 1px solid;
+                border-radius: 5px;
+
+                background: linear-gradient(180deg, #ffffff 0%, #e6e6e6 100%);
+
+                color: #000000;
+            }
+
+            .piano__key--white:active,
+            .piano__key--white .active {
+                top: 10px;
+                background: linear-gradient(180deg, #e6e6e6 0%, #ffffff 100%);
+                box-shadow: inset 0px -4px -4px rgba(0, 0, 0, 0.25);
+            }
+
+            .piano__key--black {
+                width: 100%;
+
+                border-radius: 0  0 5px 5px;
+    
+                background: linear-gradient(180deg, #000000 0%, #141414 100%);  
+
+                z-index: 2;
+            }
+
+            .piano__key--black:active,
+            .piano__key--black .active  {
+                top: 10px;
+                background: linear-gradient(180deg, #141414 0%, #000000 100%);
+                box-shadow: inset 0px -4px -4px rgba(255, 255, 255, 0.25);
+            }
+
+            .piano__key {
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
+
+            .piano__key span:first-child {
+                position: absolute;
+                bottom: 10px; 
+            }
+            
+    .piano__animals {
+        list-style: none;
+        margin: 0 auto;
+
+        display: flex;
+    }
+
+    .piano__animal {
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+    
+    .piano__animal:active,
+    .piano__animal .active {
+        transform: scale(0.9);
+        filter: brightness(1.8);
+    }
+    
+.social-media {
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
+.social-media__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    list-style: none;
+}
+
+.social-media__item {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.social-media__link { 
+    color: #000000;
+    text-decoration: none;
+}
+
+@media screen and (orientation: landscape) {
+    .landscape-message {
+      display: none;
+    }
+}
+
+  @media screen and (orientation: portrait) {
+    .landscape-message {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+
+      font-size: 2rem;
+      z-index: 999;
+    }
+}
+
+@media screen and (max-width: 866px) {
+    .piano {
+        width: 90vw;
+        padding: 1rem;
+    }
+
+    .piano__key {
+        font-size: 0.875rem;
+    }
+
+    .piano__key--white {
+        width: 8vw;
+        height: 150px;
+    }
+
+    .piano__key--black {
+        width: 4.8vw;
+        height: 90px;
+
+        margin: 0 -20px 0 -20px;
+
+    }
+
+    .piano__animals {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 867px) {
+    .piano {
+        width: 780px;
+        max-height: 100vh;
+        padding: 3rem;
+    }
+
+    .piano__key--white {
+        width: 70px;
+        height: 230px;
+        max-height: 40vh;
+    }
+
+    .piano__key--black {
+        width: 44px;
+        height: 138px;
+        max-height: 24vh;
+
+        margin: 0 -22px 0 -22px;
+    }
+
+    .piano__animals {
+        font-size: 2.5rem;
+    }
+
+}
