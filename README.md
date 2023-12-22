@@ -30,6 +30,13 @@ Para utilizar este simulador de piano, os seguintes recursos são necessários:
 
 ## Como Rodar a Aplicação
 
+### Via site
+1. Acesse o site [julianachavespalm.live/piano-simulator-js/](julianachavespalm.live/piano-simulator-js/
+)
+No computador sem touchscreen, utilize o mouse para acessar as teclas ou aproveite o teclado para combinar sons.
+Para dispositivos móveis, basta tocar nas teclas para reproduzir os sons.
+   
+## Clonagem do repositório
 1. Faça o download ou clone este repositório em seu dispositivo.
 2. Abra o arquivo `index.html` em um navegador web compatível.
 3. Permita que o JavaScript seja executado se solicitado.
