@@ -50,22 +50,3 @@ const toggleKeyDisplay = () => {
 };
 
 showKeysCheckbox.addEventListener('change', toggleKeyDisplay);
-
-
-
-const checkScreenWidth = () => {
-  const screenWidth = window.innerWidth;
-  const mobileHiddenClass = document.querySelector('.piano__mobile--hidden');
-
-  if (screenWidth <= 1024) {
-    mobileHiddenClass.style.display = 'none';
-  } else {
-    mobileHiddenClass.style.display = 'block';
-  }
-};
-
-// Chama a função para verificar a largura da tela ao carregar a página
-checkScreenWidth();
-
-// Adiciona um listener para verificar alterações na largura da tela
-window.addEventListener('resize', checkScreenWidth);
