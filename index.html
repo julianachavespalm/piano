@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,12 +16,15 @@
         Por favor, gire seu dispositivo para a orientação paisagem.
     </div>
     <main class="piano">
-        <h1 class="piano__logo">🎹 Piano Simulator</h1>
+        
         <header class="piano__controls">
+            <h1 class="piano__logo">🎹 Piano Simulator</h1>
+            
             <div class="piano__column piano__column--volume-slider">
                 <label for="volume" class="piano__label">Volume</label>
-                <input type="range" id="volume" />
+                <input type="range" id="volume" min="0" max="5" value="0.5" step="any" />
             </div>
+            
             <div class="piano__column piano__column--keys-check">
                 <label for="showKeys" class="piano__label">Teclas</label>
                 <input type="checkbox" id="showKeys" checked />
@@ -42,7 +46,17 @@
             <li class="piano__key piano__key--white" data-key="u"><span>Si</span></li>
             <li class="piano__key piano__key--white" data-key="j"><span>Dó</span></li>
         </ul>
-        ul.piano__animals>li.piano__animal
+
+        <ul class="piano__animals">
+            <li class="piano__animal" data-key="1">🐣</li>
+            <li class="piano__animal" data-key="2">🐷</li>
+            <li class="piano__animal" data-key="3">🐘</li>
+            <li class="piano__animal" data-key="4">🦆</li>
+            <li class="piano__animal" data-key="5">🐍</li>
+            <li class="piano__animal" data-key="6">🐴</li>
+            <li class="piano__animal" data-key="7">🐮</li>
+            <li class="piano__animal" data-key="8">🐸</li>
+        </ul>
 
   </main>
   <footer class="social-media">
