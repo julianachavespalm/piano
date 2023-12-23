@@ -181,19 +181,27 @@ body {
                 justify-content: center;
             }
 
-            .piano__key span:first-child {
+            
+
+            .piano__key span:nth-child(2) {
                 position: absolute;
                 bottom: 10px; 
             }
+
+            .piano__mobile--hidden {
+                font-size: 1.5rem;
+            }
             
     .piano__animals {
-        list-style: none;
+        display: flex;
         margin: 0 auto;
 
-        display: flex;
+        list-style: none;
     }
 
     .piano__animal {
+        text-align: center;
+
         cursor: pointer;
         transition: all 0.4s ease;
     }
@@ -245,6 +253,12 @@ body {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .piano__mobile--hidden {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 866px) {
     .piano {
         width: 90vw;
@@ -270,6 +284,10 @@ body {
 
     .piano__animals {
         font-size: 2rem;
+    }
+
+    .piano__mobile--hidden {
+        display: none;
     }
 }
 
@@ -298,4 +316,7 @@ body {
         font-size: 2.5rem;
     }
 
+    
+
 }
+
